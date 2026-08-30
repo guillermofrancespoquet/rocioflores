@@ -9,7 +9,7 @@
 <meta name="application-name" content="FUTEDU">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui, sans-serif; background: #fff; color: #1a1a1a; padding: 1.5rem; max-width: 860px; margin: 0 auto; }
+  body { font-family: system-ui, sans-serif; background: #fff; color: #1a1a1a; padding: 2rem 1.5rem; max-width: 860px; margin: 0 auto; }
 
   /* ── CABECERA FUTEDU ── */
   .fu-header { display:flex; align-items:center; justify-content:space-between; background:#111111; border-radius:14px; padding:14px 20px; margin-bottom:1.5rem; }
@@ -21,8 +21,8 @@
   .pn-day-btn { padding: 6px 14px; font-size: 13px; border: 1px solid #ccc; border-radius: 8px; background: transparent; color: #555; cursor: pointer; transition: background 0.15s; }
   .pn-day-btn:hover { background: #f4f4f4; }
   .pn-day-btn.active { background: #111111; color: #fff; border-color: #111111; font-weight: 500; }
-  .pn-meals { display: grid; gap: 10px; }
-  .pn-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 1rem 1.25rem; }
+  .pn-meals { display: grid; gap: 14px; }
+  .pn-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 1.1rem 1.35rem; }
   .pn-meal-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
   .pn-badge { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 8px; white-space: nowrap; }
   .badge-d   { background: #EAF3DE; color: #3B6D11; }
@@ -49,7 +49,7 @@
   .pn-batch-section h3 { font-size: 13px; font-weight: 600; color: #795700; margin-bottom: 8px; }
   .pn-batch-section ul { padding-left: 1.1rem; font-size: 13px; color: #555; line-height: 1.85; }
   .pn-batch-section .bc-note { font-size: 12px; color: #888; margin-top: 10px; border-left: 2px solid #F0D060; padding-left: 8px; }
-  .pn-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #e5e5e5; }
+  .pn-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; padding-top: 1.1rem; border-top: 1px solid #e5e5e5; }
   .pn-legend-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #777; }
   h1 { font-size: 20px; font-weight: 500; margin-bottom: 0.25rem; }
   .subtitle { font-size: 13px; color: #777; margin-bottom: 1.5rem; }
@@ -59,35 +59,35 @@
   .draft-banner strong { color:#ff6b1a; }
 
   /* ── PERFIL DE LA PERSONA ── */
-  .pn-perfil { margin-bottom: 2rem; }
-  .pn-perfil-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 0.25rem; }
+  .pn-perfil { margin-bottom: 2.75rem; }
+  .pn-perfil-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 0.4rem; }
   .pn-perfil-score { font-size: 12px; font-weight: 500; background: #f0f0f0; color: #666; border: 1px solid #ddd; border-radius: 8px; padding: 2px 10px; }
-  .pn-perfil-sub { font-size: 13px; color: #777; margin-bottom: 1rem; }
-  .pn-perfil-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 10px; }
-  .pn-perfil-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .pn-perfil-sub { font-size: 13px; color: #777; margin-bottom: 1.75rem; }
+  .pn-perfil-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 14px; }
+  .pn-perfil-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
   @media (max-width: 600px) {
     .pn-perfil-grid { grid-template-columns: repeat(2, 1fr); }
     .pn-perfil-grid-2 { grid-template-columns: 1fr; }
   }
-  .pn-metric { background: #f7f7f7; border-radius: 10px; padding: 0.75rem 1rem; }
+  .pn-metric { background: #f7f7f7; border-radius: 10px; padding: 0.9rem 1.1rem; }
   .pn-metric-lbl { font-size: 11px; color: #999; margin-bottom: 3px; }
   .pn-metric-val { font-size: 18px; font-weight: 500; color: #111; }
   .pn-metric-val.pending { color:#bbb; font-size:15px; font-style:italic; }
   .pn-metric-sub { font-size: 11px; color: #bbb; margin-top: 2px; }
-  .pn-impresiones { border: 1px solid #e5e5e5; border-radius: 12px; padding: 1rem 1.25rem; }
+  .pn-impresiones { border: 1px solid #e5e5e5; border-radius: 12px; padding: 1.25rem 1.4rem; }
   .pn-impresiones-title { font-size: 12px; font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
-  .pn-imp-item { font-size: 13px; color: #444; line-height: 1.65; padding: 0.4rem 0; border-bottom: 1px solid #f0f0f0; display: flex; gap: 8px; align-items: flex-start; }
+  .pn-imp-item { font-size: 13px; color: #444; line-height: 1.7; padding: 0.65rem 0; border-bottom: 1px solid #f0f0f0; display: flex; gap: 10px; align-items: flex-start; }
   .pn-imp-item:last-child { border-bottom: none; padding-bottom: 0; }
   .pn-imp-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
   .pn-imp-dot-green { background: #1D9E75; }
   .pn-imp-dot-blue  { background: #185FA5; }
   .pn-imp-dot-amber { background: #BA7517; }
   .pn-imp-dot-coral { background: #993C1D; }
-  .pn-perfil-divider { border: none; border-top: 1px solid #e5e5e5; margin: 1.5rem 0; }
-  .pn-perfil-section-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+  .pn-perfil-divider { border: none; border-top: 1px solid #e5e5e5; margin: 2.5rem 0; }
+  .pn-perfil-section-row { display: grid; grid-template-columns: 1fr 1fr; column-gap: 14px; row-gap: 28px; margin-bottom: 14px; }
   @media (max-width: 600px) { .pn-perfil-section-row { grid-template-columns: 1fr; } }
-  .pn-antro-card { background: #f7f7f7; border-radius: 10px; padding: 0.75rem 1rem; }
-  .pn-antro-card-title { font-size: 11px; font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+  .pn-antro-card { background: #f7f7f7; border-radius: 10px; padding: 0.9rem 1.1rem; }
+  .pn-antro-card-title { font-size: 11px; font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
   .pn-antro-row { display: flex; justify-content: space-between; font-size: 12px; padding: 3px 0; border-bottom: 1px solid #eee; color: #555; }
   .pn-antro-row:last-child { border-bottom: none; }
   .pn-antro-val { font-weight: 500; color: #111; }
@@ -107,7 +107,7 @@
   .pn-soma-num-val { font-size: 22px; font-weight: 500; color: #111; }
   .pn-soma-num-lbl { font-size: 10px; color: #aaa; margin-top: 2px; }
   .pn-soma-separator { color: #ddd; font-size: 20px; }
-  .section-label { font-size: 12px; font-weight: 500; color: #666; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.85rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e8e8e8; }
+  .section-label { font-size: 12px; font-weight: 500; color: #666; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1.1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e8e8e8; }
 
   /* ── LISTA DE COMPRA ── */
   .pn-shop-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1rem; }
@@ -135,7 +135,7 @@
   .pn-ing { display: inline-block; font-size: 12px; background: #f4f4f4; border: 1px solid #e8e8e8; border-radius: 6px; padding: 3px 9px; color: #444; line-height: 1.4; }
 
   /* ── SUPLEMENTACIÓN ── */
-  .pn-supl-block { background: #F3F0FB; border: 1px solid #C9BFEF; border-radius: 12px; padding: 1rem 1.25rem; }
+  .pn-supl-block { background: #F3F0FB; border: 1px solid #C9BFEF; border-radius: 12px; padding: 1.25rem 1.4rem; }
   .pn-supl-item { display: flex; gap: 10px; align-items: flex-start; padding: 0.5rem 0; border-bottom: 1px solid #DDD8F5; font-size: 13px; color: #333; line-height: 1.5; }
   .pn-supl-item:last-child { border-bottom: none; padding-bottom: 0; }
   .pn-supl-dot { width: 6px; height: 6px; border-radius: 50%; background: #7C5CBF; flex-shrink: 0; margin-top: 6px; }
@@ -180,9 +180,9 @@
 
 
 <!-- BLOQUE DESCRIPCIÓN CLIENTE -->
-<div style="border:1px solid #e5e5e5;border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem;background:#fafafa;">
-  <div style="font-size:11px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem;">Descripción del cliente</div>
-  <div style="display:flex;flex-wrap:wrap;gap:8px;">
+<div style="border:1px solid #e5e5e5;border-radius:12px;padding:1.25rem 1.4rem;margin-bottom:1.75rem;background:#fafafa;">
+  <div style="font-size:11px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.9rem;">Descripción del cliente</div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;">
     <div style="background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:6px 12px;font-size:12px;color:#333;">
       <span style="color:#999;font-size:10px;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:2px;">Perfil</span>
       Mujer · 16 años · 156 cm · 56,6 kg
@@ -203,8 +203,8 @@
 </div>
 
 <!-- BLOQUE OBJETIVO -->
-<div style="background:#111111;border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;">
-  <div style="font-size:11px;font-weight:600;color:#ff6b1a;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Objetivo</div>
+<div style="background:#111111;border-radius:12px;padding:1.25rem 1.4rem;margin-bottom:2.75rem;">
+  <div style="font-size:11px;font-weight:600;color:#ff6b1a;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.65rem;">Objetivo</div>
   <p style="font-size:14px;font-weight:500;color:#fff;line-height:1.65;">Maximizar el rendimiento deportivo de Rocío a través de la nutrición, con especial atención a la energía y recuperación en torno a los entrenamientos y a los futuros partidos de fin de semana. El plan se construye sobre una base de alimentación real y variada, aprovechando el buen nivel de conocimiento nutricional que ya tiene Rocío, y se irá ajustando según avance la pretemporada y se confirme el calendario de partidos.</p>
 </div>
 
@@ -217,13 +217,13 @@
   </div>
   <p class="pn-perfil-sub">Rocío Flores Salomón · 16 años · Mujer · Valorada el 21/08/2026 por Guillermo Francés (FUTEDU), con apoyo de pruebas médicas de IMED Hospitales</p>
 
-  <div class="pn-perfil-grid" style="margin-bottom:10px">
+  <div class="pn-perfil-grid" style="margin-bottom:14px">
     <div class="pn-metric"><div class="pn-metric-lbl">Peso actual</div><div class="pn-metric-val">56,6 kg</div><div class="pn-metric-sub">IMC 23,3 · Normopeso</div></div>
     <div class="pn-metric"><div class="pn-metric-lbl">Talla / envergadura</div><div class="pn-metric-val">156 / 156 cm</div><div class="pn-metric-sub">Proporción isométrica · E. relativa 1.00</div></div>
     <div class="pn-metric"><div class="pn-metric-lbl">% Masa grasa (DEXA)</div><div class="pn-metric-val">30,5 %</div><div class="pn-metric-sub">16,75 kg · Yuhasz: 18,86% · Ross-Kerr: 33,16%</div></div>
     <div class="pn-metric"><div class="pn-metric-lbl">% Masa muscular</div><div class="pn-metric-val">38,27 %</div><div class="pn-metric-sub">21,66 kg · Lee, 2000 (ISAK)</div></div>
   </div>
-  <div class="pn-perfil-grid" style="margin-bottom:10px">
+  <div class="pn-perfil-grid" style="margin-bottom:14px">
     <div class="pn-metric"><div class="pn-metric-lbl">LBM (masa libre de grasa)</div><div class="pn-metric-val">38,17 kg</div><div class="pn-metric-sub">Fuente: DEXA 03/08/2026</div></div>
     <div class="pn-metric"><div class="pn-metric-lbl">TMB</div><div class="pn-metric-val">1.300 kcal</div><div class="pn-metric-sub">Mifflin-St Jeor · Ref. báscula: 1.376 kcal</div></div>
     <div class="pn-metric"><div class="pn-metric-lbl">% Tejido adiposo</div><div class="pn-metric-val">33,16 %</div><div class="pn-metric-sub">18,77 kg (Ross y Kerr, 1993) · TVA visceral DEXA: 225 g</div></div>
@@ -231,7 +231,7 @@
   </div>
 
   <!-- Antropometría + Bioimpedancia -->
-  <div class="pn-perfil-section-row">
+  <div class="pn-perfil-section-row" style="margin-top:2rem;">
     <div>
       <div class="section-label">Datos antropométricos clave</div>
       <div class="pn-antro-card">
@@ -247,7 +247,7 @@
         <div class="pn-antro-row"><span>Tejido adiposo (Ross y Kerr, 1993)</span><span class="pn-antro-val">18,77 kg · 33,16 %</span></div>
         <div class="pn-antro-row"><span>Tejido muscular (Lee, 2000)</span><span class="pn-antro-val">21,66 kg · 38,27 %</span></div>
       </div>
-      <div class="pn-antro-card" style="margin-top:10px">
+      <div class="pn-antro-card" style="margin-top:14px">
         <div class="pn-antro-card-title">Perímetros</div>
         <div class="pn-antro-row"><span>Cintura</span><span class="pn-antro-val">73,3 cm</span></div>
         <div class="pn-antro-row"><span>Cadera</span><span class="pn-antro-val">92,7 cm</span></div>
@@ -255,7 +255,7 @@
         <div class="pn-antro-row"><span>Muslo / pierna</span><span class="pn-antro-val">51,2 / 35,7 cm</span></div>
         <div class="pn-antro-row" style="margin-top:4px;padding-top:6px;border-top:1px solid #ddd"><span>Brazo / muslo / pierna corregidos</span><span class="pn-antro-val">21,72 / 41,46 / 31,46 cm</span></div>
       </div>
-      <div class="pn-antro-card" style="margin-top:10px">
+      <div class="pn-antro-card" style="margin-top:14px">
         <div class="pn-antro-card-title">Desarrollo muscular y proporcionalidad (ISAK)</div>
         <div class="pn-antro-row"><span>Área muscular brazo / muslo / pierna</span><span class="pn-antro-val">37,53 / 136,80 / 78,75 cm²</span></div>
         <div class="pn-antro-row"><span>% Desarrollo muscular brazo / muslo / pierna</span><span class="pn-antro-val">14,83 / 54,05 / 31,12 %</span></div>
@@ -276,7 +276,7 @@
         <div class="pn-bio-row"><span class="pn-bio-label">Músculo esquelético</span><span class="pn-bio-val">21,66 kg · 38,27 % (Lee, 2000 · ISAK)</span></div>
         <div class="pn-bio-row"><span class="pn-bio-label">Grasa visceral</span><span class="pn-bio-val">TVA 225 g · 243 cm³ (DEXA) · bajo riesgo</span></div>
       </div>
-      <div class="pn-antro-card" style="margin-top:10px">
+      <div class="pn-antro-card" style="margin-top:14px">
         <div class="pn-antro-card-title">Nota metodológica</div>
         <div style="font-size:12px;color:#888;line-height:1.6;">Con el informe ISAK oficial (21/08) tenemos ya 3 métodos de % graso, y el patrón es más matizado de lo que parecía con el dato provisional: <strong style="color:#555">DEXA (30,5%) y Ross-Kerr/tejido adiposo (33,16%) convergen entre sí</strong>, mientras que <strong style="color:#555">Yuhasz/masa grasa estricta (18,86%) converge con la báscula doméstica (17,7%)</strong>. No es una tendencia única a la baja, sino dos parejas de métodos afines: Yuhasz mide masa grasa estricta con pocos puntos de pliegue, mientras que Ross-Kerr modela tejido adiposo completo (grasa + conectivo + vascular), más próximo conceptualmente a lo que capta el DEXA. Se mantiene <strong style="color:#555">DEXA + Ross-Kerr como referencia principal</strong> por su mayor coincidencia mutua.</div>
       </div>
@@ -284,7 +284,7 @@
   </div>
 
   <!-- Impresiones del profesional -->
-  <div style="margin-top:10px">
+  <div style="margin-top:2.5rem">
     <div class="section-label">Impresiones del profesional</div>
     <div class="pn-impresiones">
       <div class="pn-imp-item"><div class="pn-imp-dot pn-imp-dot-green"></div><div><strong>Buen conocimiento nutricional.</strong> Rocío llega a consulta con un nivel de conocimiento nutricional destacado para su edad, sabe orientar bien sus elecciones alimentarias y se muestra aplicada y receptiva. No partimos de cero en educación alimentaria.</div></div>
@@ -296,22 +296,22 @@
   </div>
 
   <!-- Calendario de pretemporada -->
-  <div style="margin-top:1.5rem">
+  <div style="margin-top:2.75rem;">
     <div class="section-label">Calendario de pretemporada <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#ff6b1a;">(provisional)</span></div>
-    <div style="border:1px solid #ffd8bd;background:#fff4ec;border-radius:12px;padding:1rem 1.25rem;">
-      <div style="font-size:12px;color:#7a3a12;line-height:1.8;">
+    <div style="border:1px solid #ffd8bd;background:#fff4ec;border-radius:12px;padding:1.25rem 1.4rem;">
+      <div style="font-size:12px;color:#7a3a12;line-height:1.9;">
         <div>⚽ <strong>Miércoles 2 de septiembre</strong> — partido de pretemporada (confirmado)</div>
         <div>⚽ <strong>Domingo 6 de septiembre</strong> — partido de pretemporada (confirmado)</div>
         <div>🏆 <strong>Sábado 13 de septiembre</strong> — comienzo de liga (confirmado)</div>
       </div>
-      <div style="font-size:11px;color:#a56a3a;margin-top:10px;border-top:1px solid #ffd8bd;padding-top:8px;">Calendario de pretemporada cerrado. Pendiente trasladar estas fechas concretas al array <code>days</code> del menú semanal (actualmente genérico) para ajustar con precisión la carga de CHO pre/post-partido en cada jornada específica.</div>
+      <div style="font-size:11px;color:#a56a3a;margin-top:14px;border-top:1px solid #ffd8bd;padding-top:10px;">Calendario de pretemporada cerrado. Pendiente trasladar estas fechas concretas al array <code>days</code> del menú semanal (actualmente genérico) para ajustar con precisión la carga de CHO pre/post-partido en cada jornada específica.</div>
     </div>
   </div>
 
   <!-- Nutrición pre/intra-partido -->
-  <div style="margin-top:1.5rem">
+  <div style="margin-top:2.75rem;">
     <div class="section-label">Nutrición antes y durante el partido</div>
-    <div class="pn-supp-banner" style="margin-bottom:0;">
+    <div class="pn-supp-banner" style="margin-bottom:0;padding:1.1rem 1.3rem;">
       <strong>Para los partidos de pretemporada (2 y 6 de septiembre) y el inicio de liga (13 de septiembre):</strong><br><br>
       <strong>Antes del partido (60–90 min antes):</strong> 400–500 ml de bebida isotónica + 2–3 dátiles, o un puñado de uvas pasas (~30 g), o 1 mandarina/naranja.<br>
       <strong>Durante el partido:</strong> 150–200 ml de isotónico cada 15–20 min (sorbos regulares, no de golpe). Si hay descanso, se puede añadir 1–2 dátiles más.<br><br>
@@ -321,9 +321,7 @@
 
 </div>
 
-<hr class="pn-perfil-divider">
-
-<div id="printArea" style="margin-bottom:1.5rem">
+<div id="printArea" style="margin-top:2.75rem;">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.85rem;padding-bottom:0.4rem;border-bottom:1px solid #e8e8e8;">
     <div class="section-label" style="margin:0;padding:0;border:none;">Menú semanal de un vistazo</div>
     <button class="pn-print-btn" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button>
@@ -388,7 +386,7 @@
   </div>
 </div>
 
-<div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #e5e5e5;">
+<div style="margin-top:2.75rem;">
   <div class="section-label">Menú desarrollado por días</div>
   <div class="pn-days" id="dayTabs"></div>
   <div id="dayView"></div>
@@ -401,13 +399,13 @@
   </div>
 </div>
 
-<div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #e5e5e5;">
+<div style="margin-top:2.75rem;">
   <div class="section-label">Lista de compra semanal</div>
   <div class="pn-shop-tabs" id="shopTabs"></div>
   <div id="shopView"></div>
 </div>
 
-<div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #e5e5e5;">
+<div style="margin-top:2.75rem;">
   <div class="section-label">Suplementación recomendada</div>
   <div class="pn-supl-block">
     <div class="pn-supl-item" style="align-items:center;">
@@ -418,7 +416,7 @@
   </div>
 </div>
 
-<div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #e5e5e5;">
+<div style="margin-top:2.75rem;">
   <div class="section-label">Próxima revisión</div>
   <div style="display:flex;align-items:center;gap:14px;background:#fafafa;border:1px solid #e5e5e5;border-radius:12px;padding:1rem 1.25rem;flex-wrap:wrap;">
     <div style="font-size:28px;">📅</div>
