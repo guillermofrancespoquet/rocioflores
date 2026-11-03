@@ -270,7 +270,7 @@
     <div class="section-label" style="margin:0;padding:0;border:none;">Menú semanal de un vistazo</div>
     <button class="pn-print-btn" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button>
   </div>
-  <p style="font-size:12px;color:#999;margin:-0.5rem 0 0.9rem 0;">Desayunos y meriendas actualizados tras las revisiones de seguimiento. Comidas del colegio actualizadas con el menú real de esta semana. Las cenas de la residencia quedan pendientes del nuevo menú (en espera de recibirlo); los días sin menú de residencia incluyen una recomendación para cenar fuera.</p>
+  <p style="font-size:12px;color:#999;margin:-0.5rem 0 0.9rem 0;">Desayunos y meriendas actualizados tras las revisiones de seguimiento. Comidas del colegio y cenas de la residencia actualizadas con los menús reales de esta semana; los días sin menú de residencia incluyen una recomendación para cenar fuera.</p>
   <div style="overflow-x:auto;border-radius:12px;border:1px solid #e5e5e5;">
     <table style="width:100%;border-collapse:collapse;min-width:700px;font-size:12px;">
       <thead>
@@ -318,13 +318,13 @@
         </tr>
         <tr>
           <td style="background:#f7f7f7;padding:8px 6px;border-right:2px solid #e0e0e0;text-align:center;vertical-align:middle;"><span class="pn-badge badge-ce" style="display:inline-block;">Ce</span></td>
-          <td style="background:#fdf8ff;padding:8px 10px;border-right:1px solid #eee;text-align:center;color:#333;line-height:1.4;">Ensalada + Fajita de pollo + Crema de calabacín</td>
-          <td style="background:#fdf8ff;padding:8px 10px;border-right:1px solid #eee;text-align:center;color:#333;line-height:1.4;">Ensalada + Pechuga de pollo a la plancha + Crema de patata y zanahoria</td>
-          <td style="background:#fdf8ff;padding:8px 10px;border-right:1px solid #eee;text-align:center;color:#333;line-height:1.4;">Ensalada + Tilapia al horno + Espaguetis de soja y setas</td>
-          <td style="background:#fdf8ff;padding:8px 10px;border-right:1px solid #eee;text-align:center;color:#333;line-height:1.4;">Ensalada + Palometa al vapor + Hervido valenciano</td>
+          <td style="background:#fdf8ff;padding:8px 10px;border-right:1px solid #eee;text-align:center;color:#333;line-height:1.4;">Ensalada + Espirales con salsa boloñesa + Crema de espárragos</td>
+          <td style="background:#fdf8ff;padding:8px 10px;border-right:1px solid #eee;text-align:center;color:#333;line-height:1.4;">Ensalada + Palometa a la plancha + Crema de calabacín</td>
+          <td style="background:#fdf8ff;padding:8px 10px;border-right:1px solid #eee;text-align:center;color:#333;line-height:1.4;">Ensalada + Pincho de cerdo aderezado + Crema de champiñón</td>
+          <td style="background:#fdf8ff;padding:8px 10px;border-right:1px solid #eee;text-align:center;color:#333;line-height:1.4;">Ensalada + Pollo al curry + Sopa de verduras con caracolas</td>
           <td style="background:#fdf8ff;padding:8px 10px;border-right:1px solid #eee;text-align:center;color:#333;line-height:1.4;">Cena fuera: plancha + ensalada + pan integral / patata</td>
           <td style="background:#fdf8ff;padding:8px 10px;border-right:1px solid #eee;text-align:center;color:#333;line-height:1.4;">Cena fuera: plancha + ensalada + pan integral / patata</td>
-          <td style="background:#fdf8ff;padding:8px 10px;text-align:center;color:#333;line-height:1.4;">Ensalada + Tortilla de patata + Sopa de verduras con pasta</td>
+          <td style="background:#fdf8ff;padding:8px 10px;text-align:center;color:#333;line-height:1.4;">Ensalada + Tortilla francesa + Sopa de verduras con pasta</td>
         </tr>
       </tbody>
     </table>
@@ -404,7 +404,7 @@ const days = [
       { type:"D", time:"7:00–8:30", name:"Tostadas con jamón serrano y tomate + AOVE", tags:[], desc:"Pan tostado\nJamón serrano\nTomate\nAOVE (1 cucharadita)", note:"Desayuno definitivo del plan. Día de entrenamiento.", libre:false },
       { type:"C", time:"13:30–14:30", name:"Crema de verduras + Espaguetis con salsa de setas + Albóndigas jardinera <span class=\"pn-colegio-tag\">colegio</span>", tags:[], desc:"Crema de verduras – entrante (verdura)\nAlbóndigas jardinera – un cuarto del plato (proteína)\nEspaguetis con salsa de setas – un cuarto del plato (cereal)", note:"Menú del colegio. Día de entrenamiento: pasta como carga de hidratos antes de las 18:00.", libre:false },
       { type:"Me", time:"17:00–17:30", name:"Fruta (1–2 piezas)", tags:[], desc:"Fruta de temporada – 1 a 2 piezas", note:"Merienda definitiva del plan. Práctica y rápida antes de ir directa a entrenar.", libre:false },
-      { type:"Ce", time:"20:30–21:30", name:"Fajita de pollo + Crema de calabacín", tags:[], desc:"Buffet de ensalada + Crema de calabacín – mitad del plato (verdura)\nFajita de pollo con verduras – un cuarto del plato (proteína)\nTortilla de trigo de la fajita y guarnición – un cuarto del plato (cereal)", note:"Cena post-entreno, prioridad recuperación: hidratos + proteína.", libre:false }
+      { type:"Ce", time:"20:30–21:30", name:"Espirales con salsa boloñesa + Crema de espárragos", tags:[], desc:"Buffet de ensalada + Crema de espárragos – mitad del plato (verdura)\nSalsa boloñesa – un cuarto del plato (proteína)\nEspirales – un cuarto del plato (cereal)", note:"Cena post-entreno, prioridad recuperación: hidratos + proteína.", libre:false }
     ],
     batchCooking: null
   },
@@ -420,7 +420,7 @@ const days = [
       { type:"D", time:"7:00–8:30", name:"Tostadas con aguacate + fruta", tags:[], desc:"Pan tostado\nAguacate (¼–⅓ de pieza)\nFruta (1 pieza)", note:"Desayuno definitivo del plan. Día sin entrenamiento.", libre:false },
       { type:"C", time:"13:30–14:30", name:"Tomate preparado + Rape con salsa de puerros + Pan integral <span class=\"pn-colegio-tag\">colegio</span>", tags:[], desc:"Tomate preparado – entrante (verdura)\nRape con salsa de puerros – un cuarto del plato (proteína, pescado) + verdura\nPan integral – un cuarto del plato (cereal, ración pequeña)", note:"Menú del colegio. Día sin entrenamiento: ración pequeña de pan.", libre:false },
       { type:"Me", time:"17:00–17:30", name:"Fruta (1–2 piezas)", tags:[], desc:"Fruta de temporada – 1 a 2 piezas", note:"Merienda definitiva del plan. Ligera y práctica.", libre:false },
-      { type:"Ce", time:"20:30–21:30", name:"Pechuga de pollo a la plancha + Crema de patata y zanahoria", tags:[], desc:"Buffet de ensalada + Crema de patata y zanahoria – mitad del plato (verdura)\nPechuga de pollo a la plancha – un cuarto del plato (proteína)\nGuarnición pequeña de patata o arroz – un cuarto del plato (cereal, ración pequeña)", note:"Día sin entrenamiento: ración pequeña de cereal.", libre:false }
+      { type:"Ce", time:"20:30–21:30", name:"Palometa a la plancha + Crema de calabacín", tags:[], desc:"Buffet de ensalada + Crema de calabacín – mitad del plato (verdura)\nPalometa a la plancha – un cuarto del plato (proteína, pescado)\nGuarnición pequeña de patata o arroz – un cuarto del plato (cereal, ración pequeña)", note:"Día sin entrenamiento: ración pequeña de cereal.", libre:false }
     ],
     batchCooking: null
   },
@@ -436,7 +436,7 @@ const days = [
       { type:"D", time:"7:00–8:30", name:"Tostadas con jamón york y aguacate", tags:[], desc:"Pan tostado\nJamón york\nAguacate (¼–⅓ de pieza)", note:"Desayuno definitivo del plan. Día de entrenamiento.", libre:false },
       { type:"C", time:"13:30–14:30", name:"Ensalada campera + Arroz blanco con tomate y huevo + Chuleta de pavo a la plancha con verduras <span class=\"pn-colegio-tag\">colegio</span>", tags:[], desc:"Ensalada campera – entrante (verdura)\nChuleta de pavo a la plancha – un cuarto del plato (proteína) + verduras a la plancha\nArroz blanco con tomate y huevo – un cuarto del plato (cereal)", note:"Menú del colegio. Día de entrenamiento: arroz como carga de hidratos antes de las 18:00.", libre:false },
       { type:"Me", time:"17:00–17:30", name:"Fruta (1–2 piezas)", tags:[], desc:"Fruta de temporada – 1 a 2 piezas", note:"Merienda definitiva del plan. Práctica y rápida antes de ir directa a entrenar.", libre:false },
-      { type:"Ce", time:"20:30–21:30", name:"Tilapia al horno + Espaguetis de soja y setas", tags:[], desc:"Buffet de ensalada – mitad del plato (verdura)\nTilapia al horno – un cuarto del plato (proteína, pescado)\nEspaguetis de soja y setas – un cuarto del plato (cereal)", note:"Cena post-entreno, prioridad recuperación: hidratos + proteína.", libre:false }
+      { type:"Ce", time:"20:30–21:30", name:"Pincho de cerdo aderezado + Crema de champiñón", tags:[], desc:"Buffet de ensalada + Crema de champiñón – mitad del plato (verdura)\nPincho de cerdo aderezado – un cuarto del plato (proteína)\nGuarnición de arroz o patata – un cuarto del plato (cereal)", note:"Cena post-entreno, prioridad recuperación: hidratos + proteína.", libre:false }
     ],
     batchCooking: null
   },
@@ -452,7 +452,7 @@ const days = [
       { type:"D", time:"7:00–8:30", name:"Tostadas con jamón york y tomate + AOVE", tags:[], desc:"Pan tostado\nJamón york\nTomate\nAOVE (1 cucharadita)", note:"Desayuno definitivo del plan. Día de entrenamiento.", libre:false },
       { type:"C", time:"13:30–14:30", name:"Ensalada primavera + Lentejas burgalesa + Suquet de pescado <span class=\"pn-colegio-tag\">colegio</span>", tags:[], desc:"Ensalada primavera – entrante (verdura)\nLentejas burgalesa – un cuarto del plato (legumbre: hidratos y proteína vegetal)\nSuquet de pescado – un cuarto del plato (proteína, pescado)", note:"Menú del colegio. Día de entrenamiento: las lentejas aportan hidratos y proteína vegetal antes de las 18:00.", libre:false },
       { type:"Me", time:"17:00–17:30", name:"Fruta (1–2 piezas)", tags:[], desc:"Fruta de temporada – 1 a 2 piezas", note:"Merienda definitiva del plan. Práctica y rápida antes de ir directa a entrenar.", libre:false },
-      { type:"Ce", time:"20:30–21:30", name:"Palometa al vapor + Hervido valenciano", tags:[], desc:"Buffet de ensalada + Hervido valenciano – mitad del plato (verdura y legumbre)\nPalometa al vapor – un cuarto del plato (proteína, pescado)\nPatata del hervido o guarnición – un cuarto del plato (cereal)", note:"Cena post-entreno. El hervido aporta verdura, legumbre y parte del cereal.", libre:false }
+      { type:"Ce", time:"20:30–21:30", name:"Pollo al curry + Sopa de verduras con caracolas", tags:[], desc:"Buffet de ensalada + Sopa de verduras con caracolas – mitad del plato (verdura)\nPollo al curry – un cuarto del plato (proteína)\nCaracolas de la sopa y guarnición – un cuarto del plato (cereal)", note:"Cena post-entreno. La sopa con caracolas aporta verdura y parte del cereal.", libre:false }
     ],
     batchCooking: null
   },
@@ -500,7 +500,7 @@ const days = [
       { type:"D", time:"7:00–8:30", name:"Tostadas con tomate y AOVE + fruta", tags:[], desc:"Pan tostado\nTomate\nAOVE (1 cucharadita)\nFruta (1 pieza)", note:"Desayuno definitivo del plan. Día sin entrenamiento.", libre:false },
       { type:"C", time:"13:30–14:30", name:"Arroz pilaf pasas/frutos secos + Hamburguesa pollo plancha", tags:[], desc:"Salmorejo – ración moderada (verdura)\nArroz pilaf con pasas y frutos secos – un cuarto del plato, algo generoso (cereal)\nHamburguesa de pollo a la plancha – un cuarto del plato (proteína)", note:"Ejemplo válido en día de partido: CHO + proteína magra no frita.", libre:false },
       { type:"Me", time:"17:00–17:30", name:"Fruta (1–2 piezas)", tags:[], desc:"Fruta de temporada – 1 a 2 piezas", note:"Merienda definitiva del plan. Ligera y práctica.", libre:false },
-      { type:"Ce", time:"20:30–21:30", name:"Tortilla de patata + Sopa de verduras con pasta", tags:[], desc:"Buffet de ensalada + Sopa de verduras con pasta – mitad del plato (verdura)\nTortilla de patata – un cuarto del plato (proteína)\nPasta de la sopa y patata de la tortilla – un cuarto del plato (cereal)", note:"Cena de recuperación si ha habido partido.", libre:false }
+      { type:"Ce", time:"20:30–21:30", name:"Tortilla francesa + Sopa de verduras con pasta", tags:[], desc:"Buffet de ensalada + Sopa de verduras con pasta – mitad del plato (verdura)\nTortilla francesa – un cuarto del plato (proteína)\nPasta de la sopa y guarnición – un cuarto del plato (cereal)", note:"Cena de recuperación si ha habido partido.", libre:false }
     ],
     batchCooking: null
   }
